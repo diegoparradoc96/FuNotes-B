@@ -35,6 +35,7 @@ const AlarmEvent = db.define(
     },
   },
   {
+    tableName: 'alarm_event', // Especifica el nombre de la tabla aquí
     timestamps: false, // Desabilitar fechas de creacion y actualizacion
   }
 );

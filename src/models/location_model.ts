@@ -23,6 +23,7 @@ const Location = db.define(
     },
   },
   {
+    tableName: 'location', // Especifica el nombre de la tabla aquí
     timestamps: false, // Desabilitar fechas de creacion y actualizacion
   }
 );

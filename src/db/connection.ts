@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize("phpmyadmin", "root", "", {
+const db = new Sequelize("bethel", "root", "", {
     host: "localhost",
     dialect: "mysql",
     //logging: false

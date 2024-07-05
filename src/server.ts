@@ -1,14 +1,14 @@
 import express, { Application } from "express";
 import cors from "cors";
 
-import userRoutes from "../routes/usuario_route";
-import db from "../db/connection";
+import userRoutes from "./routes/user_route";
+import db from "./db/connection";
 
 class Server {
   private app: Application;
   private port: string;
   private apiPaths = {
-    usuarios: "/api/usuario",
+    usuarios: "/api/user",
   };
 
   constructor() {
