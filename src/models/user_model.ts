@@ -8,10 +8,10 @@ const User = db.define(
     id_user: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      allowNull: true,      
+      allowNull: true,
     },
     email_user: {
-      type: DataTypes.STRING(256),      
+      type: DataTypes.STRING(256),
       allowNull: true,
     },
     password_user: {
@@ -23,7 +23,7 @@ const User = db.define(
       allowNull: true,
     },
     cell_phone_user: {
-      type: DataTypes.INTEGER,      
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
     snp_origen_user: {

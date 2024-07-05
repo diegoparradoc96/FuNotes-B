@@ -40,17 +40,14 @@ export const getUser = async (req: Request, res: Response) => {
 export const postUser = async (req: Request, res: Response) => {
   const { body } = req;
 
-  console.log("mi fokin body: ", body);
-
   const user = { ...body, password_user: hashPassword(body.password_user) };
-  console.log(user);
+
   try {
     const user = await User.create({
       ...body,
       password_user: hashPassword(body.password_user),
     });
 
-    //res.json();
     res.json(true);
   } catch (error) {
     console.error(error);
