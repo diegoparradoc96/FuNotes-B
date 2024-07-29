@@ -15,7 +15,7 @@ const Barrio = db.define(
     },    
   },
   {
-    //tableName: 'barrio', // Especifica el nombre de la tabla aquí
+    //tableName: 'barrio', // Especifica el nombre de la tabla aquí"
     //timestamps: false, // Desabilitar fechas de creacion y actualizacion
   }
 );

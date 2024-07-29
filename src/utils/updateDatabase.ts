@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize";
 
-import book_model from "../models/user_model";
+import book_model from "../models/book_model";
 
-const sequelize = new Sequelize();
+const sequelize = new Sequelize({dialect: "mysql"});
 
 async function syncDatabase() {
   try {
