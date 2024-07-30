@@ -1,14 +1,17 @@
-import { DataTypes } from "sequelize";
+import { DataTypes, Model, Optional, Sequelize  } from "sequelize";
 
 import db from "../db/connection";
 
-const BookCover = db.define(
+import {IBookCoverFixed} from "../types"
+
+interface BookCoverCreationAttributes extends Optional<IBookCoverFixed, 'id_cover'> {}
+
+const BookCover = db.define<Model<IBookCoverFixed, BookCoverCreationAttributes>>(
   "bookcover",
   {
     id_cover: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
-      allowNull: false,
+      primaryKey: true,      
     },
     url_cover: {
       type: DataTypes.STRING(2000),
