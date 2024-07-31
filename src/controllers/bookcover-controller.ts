@@ -21,6 +21,7 @@ import { BookCover } from "../models";
 export const getBookCovers = async (req: Request, res: Response) => {
   try {
     const bookCovers = await BookCover.findAll();
+    console.log("los libros que consulte: ", bookCovers)
 
     res.json(bookCovers);
   } catch (error) {

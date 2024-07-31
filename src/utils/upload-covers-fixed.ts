@@ -54,8 +54,6 @@ const postBookCoverFixed = async (coverFixed: IBookCoverFixed): Promise<boolean>
   try {
     const bookCoverFixed = await BookCover.create(coverFixed);
 
-    console.log("bookCoverFixed: ", bookCoverFixed);
-
     return true;
   } catch (error: any) {
     console.error("Error al guardar la cubierta de libro fija: ", error);
@@ -81,16 +79,12 @@ const getBookCoverFixed = async (coverFixed: IBookCoverFixed) => {
 export const postBookCoversFixed = async () => {
   try {
     for (let i = 0; i < bookCoversFixed.length; i++) {
-      console.log("A");
       const existCoverFixed = await getBookCoverFixed(bookCoversFixed[i]);
 
       if (!existCoverFixed) {
-        console.log("no existe: ", existCoverFixed);
         postBookCoverFixed(bookCoversFixed[i]);
         continue;
       }
-
-      console.log("si existe");
     }
   } catch (error) {
     //error

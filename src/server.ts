@@ -5,6 +5,7 @@ import db from "./db/connection";
 
 import userRoutes from "./routes/user_route";
 import bookRoutes from "./routes/book_routes";
+import bookCoverRoutes from "./routes/bookcover-routes";
 
 class Server {
   private app: Application;
@@ -12,6 +13,7 @@ class Server {
   private apiPaths = {
     usuarios: "/api/user",
     books: "/api/book",
+    bookCovers: "/api/book-cover"
   };
 
   constructor() {
@@ -45,6 +47,7 @@ class Server {
   routes() {
     this.app.use(this.apiPaths.usuarios, userRoutes);
     this.app.use(this.apiPaths.books, bookRoutes);
+    this.app.use(this.apiPaths.bookCovers, bookCoverRoutes);
   }
 
   listen() {
