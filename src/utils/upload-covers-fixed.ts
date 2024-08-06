@@ -5,47 +5,47 @@ import { IBookCoverFixed } from "../types";
 const bookCoversFixed: IBookCoverFixed[] = [
   {
     id_cover: 1,
-    url_cover: "https://storage.cloud.google.com/cover-book-container/1.png",
+    url_cover: "https://storage.googleapis.com/cover-book-container/1.png",
     is_public_cover: true,
   },
   {
     id_cover: 2,
-    url_cover: "https://storage.cloud.google.com/cover-book-container/2.png",
+    url_cover: "https://storage.googleapis.com/cover-book-container/2.png",
     is_public_cover: true,
   },
   {
     id_cover: 3,
-    url_cover: "https://storage.cloud.google.com/cover-book-container/3.png",
+    url_cover: "https://storage.googleapis.com/cover-book-container/3.png",
     is_public_cover: true,
   },
   {
     id_cover: 4,
-    url_cover: "https://storage.cloud.google.com/cover-book-container/4.png",
+    url_cover: "https://storage.googleapis.com/cover-book-container/4.png",
     is_public_cover: true,
   },
   {
     id_cover: 5,
-    url_cover: "https://storage.cloud.google.com/cover-book-container/5.png",
+    url_cover: "https://storage.googleapis.com/cover-book-container/5.png",
     is_public_cover: true,
   },
   {
     id_cover: 6,
-    url_cover: "https://storage.cloud.google.com/cover-book-container/6.png",
+    url_cover: "https://storage.googleapis.com/cover-book-container/6.png",
     is_public_cover: true,
   },
   {
     id_cover: 7,
-    url_cover: "https://storage.cloud.google.com/cover-book-container/7.png",
+    url_cover: "https://storage.googleapis.com/cover-book-container/7.png",
     is_public_cover: true,
   },
   {
     id_cover: 8,
-    url_cover: "https://storage.cloud.google.com/cover-book-container/8.png",
+    url_cover: "https://storage.googleapis.com/cover-book-container/8.png",
     is_public_cover: true,
   },
   {
     id_cover: 9,
-    url_cover: "https://storage.cloud.google.com/cover-book-container/9.png",
+    url_cover: "https://storage.googleapis.com/cover-book-container/9.png",
     is_public_cover: true,
   },
 ];
