@@ -1,20 +1,26 @@
 import { Request, Response } from "express";
 
-import Book from "../models/book_model";
+import { Book } from "../models/book_model";
 
 export const postBook = async (req: Request, res: Response) => {
   const { body } = req;
 
   console.log("el body: ", body);
   try {
-    const book = await Book.create(body);
+    const book = await Book.create({
+      name_book: body.name_book,
+      id_cover: body.id_cover,
+    });
 
-    res.json(true);
-  } catch (error) {
-    // error
+    res.status(201).json({
+      message: "Libro creado con exito",
+      book,
+    });
+  } catch (error: any) {
     console.error(error);
     res.status(500).json({
-      msg: "Consulte con el administrador",
+      message: "Consulte con el administrador",
+      error: error.message,
     });
   }
 };

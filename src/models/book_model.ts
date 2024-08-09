@@ -1,18 +1,20 @@
 import { DataTypes } from "sequelize";
 
 import db from "../db/connection";
+/* models */
+import { BookCover } from "../models";
 
-const Barrio = db.define(
+const Book = db.define(
   "book",
   {
     id_book: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     name_book: {
       type: DataTypes.STRING(50),
-    },    
+    },
   },
   {
     //tableName: 'barrio', // Especifica el nombre de la tabla aquí"
@@ -20,4 +22,5 @@ const Barrio = db.define(
   }
 );
 
-export default Barrio;
+
+export { Book };
