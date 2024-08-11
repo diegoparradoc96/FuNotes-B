@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 
-import { Book } from "../models/book_model";
+import { Book, BookCover } from "../models";
 
 export const postBook = async (req: Request, res: Response) => {
   const { body } = req;
@@ -27,7 +27,12 @@ export const postBook = async (req: Request, res: Response) => {
 
 export const getBooks = async (req: Request, res: Response) => {
   try {
-    const users = await Book.findAll();
+    const users = await Book.findAll({
+      include: {
+        model: BookCover,
+        as: "bookcover",
+      },
+    });
 
     res.json(users);
   } catch (error) {
