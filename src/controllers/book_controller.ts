@@ -5,7 +5,6 @@ import { Book, BookCover } from "../models";
 export const postBook = async (req: Request, res: Response) => {
   const { body } = req;
 
-  console.log("el body: ", body);
   try {
     const book = await Book.create({
       name_book: body.name_book,
@@ -40,5 +39,24 @@ export const getBooks = async (req: Request, res: Response) => {
     res.status(500).json({
       msg: "Consulte con el administrador",
     });
+  }
+};
+
+export const deleteBook = async (req: Request, res: Response) => {
+  const id_book = req.params.id_book;
+  try {
+    const bookDeleted = await Book.destroy({
+      where: {
+        id_book: id_book,
+      },
+    });
+
+    if (bookDeleted) {
+      res.status(200).send(`Libro con id_book: ${id_book} eliminado correctamente`);
+    } else {
+      res.status(404).send(`No se encontro el libro con id_book: ${id_book}`);
+    }
+  } catch (error) {
+    res.status(500).send("Error al eliminar el libro.");
   }
 };
